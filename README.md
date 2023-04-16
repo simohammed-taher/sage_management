@@ -1,67 +1,63 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Système de gestion SAGE
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Le système de gestion SAGE est une application web conçue pour gérer différents aspects des opérations quotidiennes d'une entreprise. Le système comprend divers modules tels que la gestion des employés, la gestion des congés, la gestion des salaires, la gestion des clients, la gestion des projets, la gestion des tâches, la planification et les feuilles de temps.
 
-## About Laravel
+## Fonctionnalités
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- Authentification : Système de connexion et d'inscription des utilisateurs.
+- Gestion des employés : Ajouter, modifier, supprimer et afficher les détails des employés.
+- Gestion des congés : Gérer les demandes et les approbations de congés des employés.
+- Gestion des salaires : Suivre et gérer les salaires des employés.
+- Gestion des clients : Gérer les informations et les contacts des clients.
+- Gestion de projets : Organiser et gérer les projets au sein de l'entreprise.
+- Gestion des tâches : Assigner et suivre les tâches pour les employés.
+- Planifications : Créer et gérer la planification hebdomadaire des employés.
+- Feuilles de temps : Suivre la présence des employés et le temps passé sur les tâches.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Installation
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+1. Clonez le dépôt ou téléchargez le code source.
 
-## Learning Laravel
+git clone https://github.com/votre_nom_utilisateur/sage-management.git
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+2. Accédez au dossier du projet et installez les dépendances requises à l'aide de Composer.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+cd sage-management
+composer install
+3. Copiez le fichier .env.example et créez un nouveau fichier .env.
 
-## Laravel Sponsors
+cp .env.example .env
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
+4. Générez une nouvelle clé d'application.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+php artisan key:generate
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+5. Créez une nouvelle base de données et mettez à jour le fichier .env avec les informations d'identification de la base de données (DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, DB_PASSWORD).
 
-## Code of Conduct
+6. Exécutez les migrations et remplissez la base de données.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+php artisan migrate --seed
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+7. Démarrez le serveur de développement local.
 
-## License
+php artisan serve
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# sage_management
+
+8. Visitez l'application dans votre navigateur web à l'adresse http://127.0.0.1:8000.
+
+## Contribuer
+
+1. Bifurquez le dépôt sur GitHub.
+2. Clonez votre dépôt bifurqué sur votre machine locale.
+3. Créez une nouvelle branche pour votre fonctionnalité ou correction de bug.
+4. Effectuez vos modifications et validez-les dans votre branche.
+5. Envoyez votre branche sur GitHub.
+6. Créez une nouvelle demande d'extraction sur GitHub pour soumettre vos modifications.
+
+## Licence
+
+Ce projet est sous licence MIT.
