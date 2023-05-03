@@ -4,15 +4,15 @@ Le système de gestion SAGE est une application web conçue pour gérer différe
 
 ## Fonctionnalités
 
-- Authentification : Système de connexion et d'inscription des utilisateurs.
-- Gestion des employés : Ajouter, modifier, supprimer et afficher les détails des employés.
-- Gestion des congés : Gérer les demandes et les approbations de congés des employés.
-- Gestion des salaires : Suivre et gérer les salaires des employés.
-- Gestion des clients : Gérer les informations et les contacts des clients.
-- Gestion de projets : Organiser et gérer les projets au sein de l'entreprise.
-- Gestion des tâches : Assigner et suivre les tâches pour les employés.
-- Planifications : Créer et gérer la planification hebdomadaire des employés.
-- Feuilles de temps : Suivre la présence des employés et le temps passé sur les tâches.
+- [x]  Authentification : Système de connexion et d'inscription des utilisateurs.
+- [x] Gestion des employés : Ajouter, modifier, supprimer et afficher les détails des employés.
+- [x] Gestion des congés : Gérer les demandes et les approbations de congés des employés.
+- [x] Gestion des salaires : Suivre et gérer les salaires des employés.
+- [x] Gestion des clients : Gérer les informations et les contacts des clients.
+- [x] Gestion de projets : Organiser et gérer les projets au sein de l'entreprise.
+- [x] Gestion des tâches : Assigner et suivre les tâches pour les employés.
+- [x] Planifications : Créer et gérer la planification hebdomadaire des employés.
+- [x] Feuilles de temps : Suivre la présence des employés et le temps passé sur les tâches.
 
 ## Installation
 
