@@ -17,35 +17,37 @@ Le système de gestion SAGE est une application web conçue pour gérer différe
 ## Installation
 
 1. Clonez le dépôt ou téléchargez le code source.
+```
 
 git clone https://github.com/votre_nom_utilisateur/sage-management.git
-
+```
 
 2. Accédez au dossier du projet et installez les dépendances requises à l'aide de Composer.
-
+```
 cd sage-management
 composer install
+```
 3. Copiez le fichier .env.example et créez un nouveau fichier .env.
-
+```
 cp .env.example .env
-
+```
 
 4. Générez une nouvelle clé d'application.
-
+```
 php artisan key:generate
-
+```
 
 5. Créez une nouvelle base de données et mettez à jour le fichier .env avec les informations d'identification de la base de données (DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, DB_PASSWORD).
 
 6. Exécutez les migrations et remplissez la base de données.
-
+```
 php artisan migrate --seed
-
+```
 
 7. Démarrez le serveur de développement local.
-
+```
 php artisan serve
-
+```
 
 8. Visitez l'application dans votre navigateur web à l'adresse http://127.0.0.1:8000.
 
