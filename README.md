@@ -19,7 +19,7 @@ Le système de gestion SAGE est une application web conçue pour gérer différe
 1. Clonez le dépôt ou téléchargez le code source.
 ```
 
-git clone https://github.com/votre_nom_utilisateur/sage-management.git
+git clone https://github.com/simohammed-taher/sage-management.git
 ```
 
 2. Accédez au dossier du projet et installez les dépendances requises à l'aide de Composer.
