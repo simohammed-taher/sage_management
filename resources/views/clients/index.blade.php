@@ -3,6 +3,8 @@
 @section('title', 'Clients')
 
 @section('content')
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.17/dist/tailwind.min.css" rel="stylesheet">
+
     <div class="container mt-5">
         <h1>Clients</h1>
         <a href="{{ route('clients.create') }}" class="btn btn-primary mb-3">Add Client</a>
@@ -35,5 +37,9 @@
                 @endforeach
             </tbody>
         </table>
+        <div class="mt-3">
+            {{ $clients->links() }}
+        </div>
     </div>
+
 @endsection

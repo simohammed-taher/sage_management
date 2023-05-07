@@ -19,7 +19,7 @@
                 @foreach ($plannings as $planning)
                     <tr>
                         <td>{{ $planning->id }}</td>
-                        <td>{{ $planning->employee->name }}</td>
+                        {{-- <td>{{ $planning->employee->name }}</td> --}}
                         <td>{{ $planning->task->name }}</td>
                         <td>
                             Mon: {{ $planning->mon }}<br>
@@ -32,13 +32,15 @@
                         </td>
                         <td>
                             <a href="{{ route('plannings.show', $planning->id) }}" class="btn btn-info">View</a>
-                            <a href="{{ route('plannings.edit', $planning->id) }}" class="btn btn-warning">Edit</a>
+                        </td>
+                        <td><a href="{{ route('plannings.edit', $planning->id) }}" class="btn btn-warning">Edit</a>
                             <form action="{{ route('plannings.destroy', $planning->id) }}" method="POST"
                                 style="display:inline">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">Delete</button>
-                            </form>
+                        </td>
+                        </form>
                         </td>
                     </tr>
                 @endforeach

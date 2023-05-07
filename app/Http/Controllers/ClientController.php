@@ -7,11 +7,23 @@ use Illuminate\Http\Request;
 
 class ClientController extends Controller
 {
+    // public function index()
+    // {
+    // // $clients = Client::all();
+    // $clients = Client::paginate(10);
+
+    // return view('clients.index', ['clients' => $clients]);
+    // $clients = Client::orderBy('id', 'DESC')->paginate(5);
+
+    // return view('clients.index', ['clients' => $clients]);
+
     public function index()
     {
-        $clients = Client::all();
+        $clients = Client::paginate(6); // Adjust the number to the desired number of items per page
         return view('clients.index', compact('clients'));
     }
+
+    // }
 
     public function create()
     {

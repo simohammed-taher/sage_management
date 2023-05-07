@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.17/dist/tailwind.min.css" rel="stylesheet">
+
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-6 offset-md-3">
@@ -9,7 +11,53 @@
                         <h1 class="text-center">Add Employee</h1>
                     </div>
                     <div class="card-body">
-                        <form action="{{ route('employees.store') }}" method="POST">
+                        <form action="{{ route('employees.store') }}" method="post" enctype="multipart/form-data">
+                            @csrf
+                            <div class="card border-0 shadow-lg">
+                                <div class="card-body">
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label">Name</label>
+                                        <input type="text" name="name" id="name" placeholder="Enter Name"
+                                            class="form-control @error('name') is-invalid @enderror"
+                                            value="{{ old('name') }}">
+                                        @error('name')
+                                            <p class="invalid-feedback">{{ $message }}</p>
+                                        @enderror
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="text" name="email" id="email" placeholder="Enter Email"
+                                            class="form-control @error('email') is-invalid @enderror"
+                                            value="{{ old('email') }}">
+                                        @error('email')
+                                            <p class="invalid-feedback">{{ $message }}</p>
+                                        @enderror
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="position" class="form-label">Position</label>
+                                        <input name="position" id="position" placeholder="Enter position"
+                                            class="form-control">{{ old('position') }}
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="image" class="form-label"></label>
+                                        <input type="file" name="image" id="image"
+                                            class="@error('image') is-invalid @enderror">
+
+                                        @error('image')
+                                            <p class="invalid-feedback">{{ $message }}</p>
+                                        @enderror
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary mt-3">Save Employee</button>
+
+                        </form>
+                        {{-- <form action="{{ route('employees.store') }}" method="POST">
                             @csrf
                             <div class="mb-3">
                                 <label for="name" class="form-label">Name:</label>
@@ -26,7 +74,12 @@
                             <div class="d-grid">
                                 <button type="submit" class="btn btn-primary">Add Employee</button>
                             </div>
-                        </form>
+                            <div class="mb-3">
+                                <label for="image" class="form-label"></label>
+                                <input type="file" name="image" id="image" />
+                            </div>
+
+                        </form> --}}
                     </div>
                 </div>
             </div>

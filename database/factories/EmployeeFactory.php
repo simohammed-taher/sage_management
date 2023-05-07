@@ -15,6 +15,8 @@ class EmployeeFactory extends Factory
             'name' => $this->faker->name,
             'email' => $this->faker->unique()->safeEmail,
             'position' => $this->faker->randomFloat(2, 1000, 10000),
+            'image' => "https://loremflickr.com/640/480/people?random=" . rand(1, 10000),
+
         ];
     }
 }

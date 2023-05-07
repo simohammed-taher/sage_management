@@ -14,6 +14,8 @@ class CreateEmployeesTable extends Migration
             $table->string('email')->unique();
             $table->string('position');
             // $table->string('phone');
+            $table->string('image')->default('null');;
+
             $table->timestamps();
         });
     }

@@ -3,7 +3,7 @@
 use App\Models\Client;
 use Illuminate\Database\Seeder;
 
-class ClientSeeder extends Seeder
+class ClientsTableSeeder extends Seeder
 {
     public function run()
     {

@@ -13,7 +13,7 @@ class SalaryFactory extends Factory
         return [
             'employee_id' => Employee::factory(),
             'amount' => $this->faker->randomFloat(2, 1000, 10000),
-            'pay_date' => $this->faker->date(),
+            'pay_date' => $this->faker->dateTimeBetween('-1 year', 'now')->format('Y-m-d'),
         ];
     }
 }
