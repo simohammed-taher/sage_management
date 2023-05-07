@@ -3,9 +3,13 @@
 @section('title', 'Tasks')
 
 @section('content')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <div class="container mt-5">
         <h1>Tasks</h1>
-        <a href="{{ route('tasks.create') }}" class="btn btn-primary mb-3">Add Task</a>
+        <a href="{{ route('tasks.create') }}" class="btn btn-primary mb-3">
+            <i class="fas fa-plus"></i> Add Task
+        </a>
         <table class="table">
             <thead>
                 <tr>
@@ -26,11 +30,15 @@
                         <td>{{ $task->due_date }}</td>
                         <td>{{ $task->completed ? 'Yes' : 'No' }}</td>
                         <td>
-                            <a href="{{ route('tasks.edit', $task->id) }}" class="btn btn-sm btn-warning">Edit</a>
+                            <a href="{{ route('tasks.edit', $task->id) }}" class="btn btn-sm btn-warning">
+                                <i class="fas fa-edit"></i> Edit
+                            </a>
                             <form action="{{ route('tasks.destroy', $task->id) }}" method="POST" class="d-inline">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                <button type="submit" class="btn btn-sm btn-danger">
+                                    <i class="fas fa-trash"></i> Delete
+                                </button>
                             </form>
                         </td>
                     </tr>

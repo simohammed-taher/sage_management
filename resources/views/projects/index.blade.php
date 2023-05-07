@@ -3,9 +3,14 @@
 @section('title', 'Projects')
 
 @section('content')
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.17/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <div class="container mt-5">
         <h1>Projects</h1>
-        <a href="{{ route('projects.create') }}" class="btn btn-primary mb-3">Add Project</a>
+        <a href="{{ route('projects.create') }}" class="btn btn-primary mb-3">
+            <i class="fas fa-plus"></i> Add Project
+        </a>
         <table class="table">
             <thead>
                 <tr>
@@ -26,11 +31,15 @@
                         <td>{{ $project->start_date }}</td>
                         <td>{{ $project->end_date }}</td>
                         <td>
-                            <a href="{{ route('projects.edit', $project->id) }}" class="btn btn-sm btn-warning">Edit</a>
+                            <a href="{{ route('projects.edit', $project->id) }}" class="btn btn-sm btn-warning">
+                                <i class="fas fa-edit"></i> Edit
+                            </a>
                             <form action="{{ route('projects.destroy', $project->id) }}" method="POST" class="d-inline">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                <button type="submit" class="btn btn-sm btn-danger">
+                                    <i class="fas fa-trash"></i> Delete
+                                </button>
                             </form>
                         </td>
                     </tr>

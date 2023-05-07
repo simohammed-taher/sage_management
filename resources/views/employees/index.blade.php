@@ -11,6 +11,8 @@
     <!-- Bootstrap Icons CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.17/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <style>
         .btn-primary {
@@ -30,13 +32,14 @@
     @extends('layouts.app')
 
     @section('content')
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
         <div class="container mt-5">
             <div class="row">
                 <div class="col-md-12">
                     <h1 class="mb-4">Employees</h1>
-                    <a href="{{ route('employees.create') }}" class="btn btn-primary mb-3">Add Employee</a>
+                    <a href="{{ route('employees.create') }}" class="btn btn-primary mb-3">
+                        <i class="fas fa-plus"></i> Add Employee
+                    </a>
+
                     <table class="table table-striped">
                         <thead>
                             <tr>
@@ -86,15 +89,20 @@
                                     <td>{{ $employee->position }}</td>
                                     <td>
                                         <a href="{{ route('employees.edit', $employee->id) }}"
-                                            class="btn btn-sm btn-warning"><i class="btn bi bi-pen"></i></a>
+                                            class="btn btn-sm btn-warning">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
                                         <form action="{{ route('employees.destroy', $employee->id) }}" method="POST"
                                             class="d-inline">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-sm btn-danger"
-                                                onclick="return confirmDelete()"><i class="btn bi bi-trash"></i></button>
+                                                onclick="return confirmDelete()">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </button>
                                         </form>
                                     </td>
+
                                 </tr>
                             @endforeach
                         </tbody>

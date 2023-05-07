@@ -4,10 +4,14 @@
 
 @section('content')
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.17/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <div class="container mt-5">
-        <h1>Clients</h1>
-        <a href="{{ route('clients.create') }}" class="btn btn-primary mb-3">Add Client</a>
+        {{-- <h2 class="mb-4">Clients</H2> --}}
+
+        <a href="{{ route('clients.create') }}" class="btn btn-primary mb-3">
+            <i class="fas fa-plus"></i> Add Client
+        </a>
         <table class="table">
             <thead>
                 <tr>
@@ -26,11 +30,15 @@
                         <td>{{ $client->email }}</td>
                         <td>{{ $client->phone }}</td>
                         <td>
-                            <a href="{{ route('clients.edit', $client->id) }}" class="btn btn-sm btn-warning">Edit</a>
+                            <a href="{{ route('clients.edit', $client->id) }}" class="btn btn-sm btn-warning">
+                                <i class="fas fa-edit"></i> Edit
+                            </a>
                             <form action="{{ route('clients.destroy', $client->id) }}" method="POST" class="d-inline">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                <button type="submit" class="btn btn-sm btn-danger">
+                                    <i class="fas fa-trash"></i> Delete
+                                </button>
                             </form>
                         </td>
                     </tr>

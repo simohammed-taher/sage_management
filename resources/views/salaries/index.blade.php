@@ -1,13 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-12">
-                {{-- <div class="d-flex justify-content-between align-items-center"> --}}
                 <h1 class="mb-4">Salaries</h1>
-                <a href="{{ route('salaries.create') }}" class="btn btn-primary">Add Salary</a>
-                {{-- </div> --}}
+                <a href="{{ route('salaries.create') }}" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Add Salary
+                </a>
                 <table class="table table-striped mt-3">
                     <thead>
                         <tr>
@@ -24,13 +26,16 @@
                                 <td>{{ $salary->amount }}</td>
                                 <td>{{ $salary->pay_date }}</td>
                                 <td>
-                                    <a href="{{ route('salaries.edit', $salary->id) }}"
-                                        class="btn btn-sm btn-primary">Edit</a>
+                                    <a href="{{ route('salaries.edit', $salary->id) }}" class="btn btn-sm btn-primary">
+                                        <i class="fas fa-edit"></i> Edit
+                                    </a>
                                     <form action="{{ route('salaries.destroy', $salary->id) }}" method="POST"
                                         class="d-inline">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                        <button type="submit" class="btn btn-sm btn-danger">
+                                            <i class="fas fa-trash"></i> Delete
+                                        </button>
                                     </form>
                                 </td>
                             </tr>
