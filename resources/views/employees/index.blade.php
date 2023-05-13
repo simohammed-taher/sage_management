@@ -35,6 +35,8 @@
         <div class="container mt-5">
             <div class="row">
                 <div class="col-md-12">
+                <a href="{{ route('employees.export') }}" class="btn btn-primary">Export Employees</a>
+
                     <h1 class="mb-4">Employees</h1>
                     <a href="{{ route('employees.create') }}" class="btn btn-primary mb-3">
                         <i class="fas fa-plus"></i> Add Employee

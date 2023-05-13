@@ -6,9 +6,14 @@ use App\Models\Employee;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\File;
-
+use App\Exports\EmployeesExport;
+use Maatwebsite\Excel\Facades\Excel;
 class EmployeeController extends Controller
 {
+    public function export()
+    {
+        return Excel::download(new EmployeesExport, 'users.xlsx');
+    }
     public function index()
     {
 
