@@ -9,7 +9,7 @@
         </tr>
         <tr>
             <th>Task</th>
-            <td>{{ $planning->task->name }}</td>
+            <td>{{ $planning->task->description }}</td>
         </tr>
         <tr>
             <th>Monday</th>

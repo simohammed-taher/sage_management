@@ -26,7 +26,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="employee_id">Employee ID</label>
-                                <input type="number" class="form-control" id="employee_id" name="employee_id" required>
+                                <input type="text" class="form-control" id="employee_id" name="matricule" required>
                             </div>
                             <div class="form-group">
                                 <label for="task_id">Task ID</label>

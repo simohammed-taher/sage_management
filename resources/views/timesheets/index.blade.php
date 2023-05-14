@@ -24,10 +24,10 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th>ID</th>
+                                    {{-- <th>ID</th> --}}
                                     <th>Day</th>
                                     <th>Attendance</th>
-                                    <th>Employee ID</th>
+                                    <th>matricule</th>
                                     <th>Task ID</th>
                                     <th>Actions</th>
                                 </tr>
@@ -35,10 +35,11 @@
                             <tbody>
                                 @foreach ($timesheets as $timesheet)
                                     <tr>
-                                        <td>{{ $timesheet->id }}</td>
+                                        {{-- <td>{{ $timesheet->id }}</td> --}}
                                         <td>{{ $timesheet->day }}</td>
                                         <td>{{ $timesheet->attendance ? 'Present' : 'Absent' }}</td>
-                                        <td>{{ $timesheet->employee_id }}</td>
+                                        <td>{{ $timesheet->matricule }}</td>
+
                                         <td>{{ $timesheet->task_id }}</td>
                                         <td>
                                             <a href="{{ route('timesheets.edit', $timesheet->id) }}"

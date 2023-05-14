@@ -118,7 +118,7 @@
                     id="img">
             </header>
             <a class="navbar-brand navbar-brand-custom" href="#" id="title">
-                SAGE Management
+                Gestion SAGE
             </a>
             <button class="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -130,19 +130,19 @@
             @guest
                 <li class="nav-item">
                     <a class="nav-link nav-link-custom" href="{{ route('login') }}">
-                        <i class="bi bi-door-open"></i> Login
+                        <i class="bi bi-door-open"></i> Connexion
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link nav-link-custom" href="{{ route('register') }}">
-                        <i class="bi bi-person-plus-fill"></i> Register
+                        <i class="bi bi-person-plus-fill"></i> Inscription
                     </a>
                 </li>
             @else
                 <li class="nav-item">
                     <a class="nav-link nav-link-custom" href="{{ route('logout') }}"
                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                        <i class="bi bi-box-arrow-right"></i> Logout
+                        <i class="bi bi-box-arrow-right"></i> Déconnexion
                     </a>
                 </li>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -158,22 +158,19 @@
         <div class="row">
             <div class="col-md-3 col-lg-2 sidebar-custom">
                 <ul class="nav flex-column">
-                    {{-- <li class="nav-item">
-                        <a class="nav-link" href="#">Dashboard</a>
-                    </li> --}}
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('employees.index') }}">
-                            <i class="bi bi-person"></i> Employees
+                            <i class="bi bi-person"></i> Employés
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('salaries.index') }}">
-                            <i class="bi bi-cash"></i> Salaries
+                            <i class="bi bi-cash"></i> Salaires
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('leaves.index') }}">
-                            <i class="bi bi-calendar-event"></i> Leaves
+                            <i class="bi bi-calendar-event"></i> Congés
                         </a>
                     </li>
                     {{-- party2 --}}
@@ -184,22 +181,22 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('projects.index') }}">
-                            <i class="bi bi-briefcase"></i> Projects
+                            <i class="bi bi-briefcase"></i> Projets
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('tasks.index') }}">
-                            <i class="bi bi-check2-square"></i> Tasks
+                            <i class="bi bi-check2-square"></i> Tâches
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('plannings.index') }}">
-                            <i class="bi bi-calendar-check"></i> Plannings
+                            <i class="bi bi-calendar-check"></i> Planifications
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('timesheets.index') }}">
-                            <i class="bi bi-clock"></i> Timesheets
+                            <i class="bi bi-clock"></i> Feuilles de temps
                         </a>
                     </li>
                 </ul>

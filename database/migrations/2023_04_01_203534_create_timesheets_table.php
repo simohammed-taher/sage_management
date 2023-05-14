@@ -10,13 +10,13 @@ class CreateTimesheetsTable extends Migration
     {
         Schema::create('timesheets', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('matricule');
+            $table->string('matricule');
             $table->unsignedBigInteger('task_id');
             $table->date('day');
             $table->boolean('attendance');
             $table->timestamps();
 
-            $table->foreign('matricule')->references('id')->on('employees')->onDelete('cascade');
+            $table->foreign('matricule')->references('name')->on('employees')->onDelete('cascade');
             $table->foreign('task_id')->references('id')->on('tasks')->onDelete('cascade');
         });
     }

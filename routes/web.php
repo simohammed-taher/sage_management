@@ -19,12 +19,15 @@ use App\Http\Controllers\TimesheetController;
 Route::middleware(['auth'])->group(function () {
 
     Route::resource('employees', EmployeeController::class);
+
+
     Route::resource('salaries', SalaryController::class);
     Route::resource('leaves', LeaveController::class)->parameters(['leaves' => 'leave']);
     // ...
     Route::resource('clients', ClientController::class);
     Route::resource('projects', ProjectController::class);
-    Route::resource('tasks', TaskController::class);});
+    Route::resource('tasks', TaskController::class);
+});
 
 
 // ...

@@ -17,7 +17,7 @@
                 <label for="task_id">Task</label>
                 <select class="form-control" name="task_id" id="task_id">
                     @foreach ($tasks as $task)
-                        <option value="{{ $task->id }}">{{ $task->name }}</option>
+                        <option value="{{ $task->id }}">{{ $task->description }}</option>
                     @endforeach
                 </select>
             </div>

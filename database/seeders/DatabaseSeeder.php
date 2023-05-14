@@ -17,11 +17,11 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // Generate test data for each model
-        Employee::factory(100)->create();
+        // Employee::factory(100)->create();
         Salary::factory(30)->create();
-        Leave::factory(20)->create();
-        Client::factory(10)->create();
-        Project::factory(15)->create();
-        Task::factory(50)->create();
+        // Leave::factory(20)->create();
+        // Client::factory(10)->create();
+        // Project::factory(15)->create();
+        // Task::factory(50)->create();
     }
 }

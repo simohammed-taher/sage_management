@@ -18,6 +18,7 @@
                     <th>Name</th>
                     <th>Due Date</th>
                     <th>Completed</th>
+                    <th>description</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -29,6 +30,7 @@
                         <td>{{ $task->name }}</td>
                         <td>{{ $task->due_date }}</td>
                         <td>{{ $task->completed ? 'Yes' : 'No' }}</td>
+                        <th>{{ $task->description }}</th>
                         <td>
                             <a href="{{ route('tasks.edit', $task->id) }}" class="btn btn-sm btn-warning">
                                 <i class="fas fa-edit"></i> Edit

@@ -17,7 +17,7 @@
                         <tr>
                             <th>ID</th>
                             <th>Employee</th>
-                            <th>Task</th>
+                            {{-- <th>Task</th> --}}
                             <th>Days</th>
                             <th>Actions</th>
                         </tr>
@@ -26,23 +26,20 @@
                         @foreach ($plannings as $planning)
                             <tr>
                                 <td>{{ $planning->id }}</td>
-                                {{-- <td>{{ $planning->employee->name }}</td> --}}
                                 <td>{{ $planning->task->name }}</td>
                                 <td>
-                                    Mon: {{ $planning->mon }}<br>
-                                    Tue: {{ $planning->tue }}<br>
-                                    Wed: {{ $planning->wed }}<br>
-                                    Thu: {{ $planning->thu }}<br>
-                                    Fri: {{ $planning->fri }}<br>
-                                    Sat: {{ $planning->sat }}<br>
-                                    Sun: {{ $planning->sun }}
+                                    lundi: {{ $planning->mon }}:heure<br>
+                                    mardi: {{ $planning->tue }}:heure<br>
+                                    mercredi: {{ $planning->wed }}:heure<br>
+                                    jeudi: {{ $planning->thu }}:heure<br>
+                                    vendredi: {{ $planning->fri }}:heure<br>
+                                    samedi: {{ $planning->sat }}:heure<br>
+                                    dimanche: {{ $planning->sun }}:heure
                                 </td>
                                 <td>
                                     <a href="{{ route('plannings.show', $planning->id) }}" class="btn btn-info">
                                         <i class="fas fa-eye"></i> View
                                     </a>
-                                </td>
-                                <td>
                                     <a href="{{ route('plannings.edit', $planning->id) }}" class="btn btn-warning">
                                         <i class="fas fa-edit"></i> Edit
                                     </a>

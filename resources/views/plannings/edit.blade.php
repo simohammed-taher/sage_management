@@ -20,7 +20,7 @@
                 <select class="form-control" name="task_id" id="task_id">
                     @foreach ($tasks as $task)
                         <option value="{{ $task->id }}" {{ $planning->task_id == $task->id ? 'selected' : '' }}>
-                            {{ $task->name }}</option>
+                            {{ $task->description }}</option>
                     @endforeach
                 </select>
             </div>

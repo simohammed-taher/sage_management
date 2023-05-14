@@ -19,7 +19,8 @@ class ClientController extends Controller
 
     public function index()
     {
-        $clients = Client::paginate(6); // Adjust the number to the desired number of items per page
+        $clients = Client::orderBy('id', 'DESC')->paginate(5); // Adjust the number to the desired number of items per page
+        // Employee::orderBy('id', 'DESC')->paginate(50)
         return view('clients.index', compact('clients'));
     }
 
