@@ -96,10 +96,10 @@
                 <div class="card">
                     <div class="card-body">
                         <h2 class="card-title">
-                            <i class="fas fa-users"></i> Manage Employees
+                            <i class="fas fa-users"></i> Gérer les employés
                         </h2>
                         <a href="{{ route('employees.index') }}" class="btn btn-custom">
-                            <i class="fas fa-arrow-right"></i> Go to Employees
+                            <i class="fas fa-arrow-right"></i> Aller aux employés
                         </a>
                     </div>
                 </div>
@@ -108,10 +108,10 @@
                 <div class="card">
                     <div class="card-body">
                         <h2 class="card-title">
-                            <i class="fas fa-money-bill-wave"></i> Manage Salaries
+                            <i class="fas fa-money-bill-wave"></i> Gérer les salaires
                         </h2>
                         <a href="{{ route('salaries.index') }}" class="btn btn-custom">
-                            <i class="fas fa-arrow-right"></i> Go to Salaries
+                            <i class="fas fa-arrow-right"></i> Aller aux salaires
                         </a>
                     </div>
                 </div>
@@ -120,10 +120,10 @@
                 <div class="card">
                     <div class="card-body">
                         <h2 class="card-title">
-                            <i class="fas fa-calendar-alt"></i> Manage Leaves
+                            <i class="fas fa-calendar-alt"></i> Gérer les congés
                         </h2>
                         <a href="{{ route('leaves.index') }}" class="btn btn-custom">
-                            <i class="fas fa-arrow-right"></i> Go to Leaves
+                            <i class="fas fa-arrow-right"></i> Aller aux congés
                         </a>
                     </div>
                 </div>
@@ -135,10 +135,10 @@
                 <div class="card">
                     <div class="card-body">
                         <h2 class="card-title">
-                            <i class="fas fa-handshake"></i> Manage Clients
+                            <i class="fas fa-handshake"></i> Gérer les clients
                         </h2>
                         <a href="{{ route('clients.index') }}" class="btn btn-custom">
-                            <i class="fas fa-arrow-right"></i> Go to Clients
+                            <i class="fas fa-arrow-right"></i>Aller aux clients
                         </a>
                     </div>
                 </div>
@@ -147,10 +147,10 @@
                 <div class="card">
                     <div class="card-body">
                         <h2 class="card-title">
-                            <i class="fas fa-project-diagram"></i> Manage Projects
+                            <i class="fas fa-project-diagram"></i> Gérer les projets
                         </h2>
                         <a href="{{ route('projects.index') }}" class="btn btn-custom">
-                            <i class="fas fa-arrow-right"></i> Go to Projects
+                            <i class="fas fa-arrow-right"></i> Aller aux projets
                         </a>
                     </div>
                 </div>
@@ -159,10 +159,10 @@
                 <div class="card">
                     <div class="card-body">
                         <h2 class="card-title">
-                            <i class="fas fa-tasks"></i> Manage Tasks
+                            <i class="fas fa-tasks"></i> Gérer les tâches
                         </h2>
                         <a href="{{ route('tasks.index') }}" class="btn btn-custom">
-                            <i class="fas fa-arrow-right"></i> Go to Tasks
+                            <i class="fas fa-arrow-right"></i> Aller aux tâches
                         </a>
                     </div>
                 </div>
@@ -171,10 +171,10 @@
                 <div class="card">
                     <div class="card-body">
                         <h2 class="card-title">
-                            <i class="fas fa-calendar-check"></i> Manage Plannings
+                            <i class="fas fa-calendar-check"></i> Gérer les planifications
                         </h2>
                         <a href="{{ route('plannings.index') }}" class="btn btn-custom">
-                            <i class="fas fa-arrow-right"></i> Go to Plannings
+                            <i class="fas fa-arrow-right"></i> Aller aux planifications
                         </a>
                     </div>
                 </div>
@@ -183,10 +183,10 @@
                 <div class="card">
                     <div class="card-body">
                         <h2 class="card-title">
-                            <i class="fas fa-clock"></i> Manage Timesheets
+                            <i class="fas fa-clock"></i> Gérer les feuilles de temps
                         </h2>
                         <a href="{{ route('timesheets.index') }}" class="btn btn-custom">
-                            <i class="fas fa-arrow-right"></i> Go to Timesheets
+                            <i class="fas fa-arrow-right"></i> Aller aux feuilles de temps
                         </a>
                     </div>
                 </div>
